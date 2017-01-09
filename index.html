@@ -10,7 +10,7 @@
     <meta name="description" content="Purified drinking water in New Jersey - Forest Water.">
     <meta name="author" content="Joab Arzua">
 	<meta name="keywords" content="purified water, drinking water, clean water, water, west new york, new jersey"> 
-	<link rel="icon" href="img/favicon.ico" />
+	<link rel="icon" href="favicon.ico" />
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,6 +21,28 @@
 
     <!-- Theme CSS -->
     <link href="css/creative.css" rel="stylesheet">
+    <link href="css/ns.css" rel="stylesheet">
+    <script>
+        function lightbox(idx) {
+            //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+            var ninjaSldr = document.getElementById("ninja-slider");
+            ninjaSldr.parentNode.style.display = "block";
+
+            nslider.init(idx);
+
+            var fsBtn = document.getElementById("fsBtn");
+            fsBtn.click();
+        }
+
+        function fsIconClick(isFullscreen) { //fsIconClick is the default event handler of the fullscreen button
+            if (isFullscreen) {
+                var ninjaSldr = document.getElementById("ninja-slider");
+                ninjaSldr.parentNode.style.display = "none";
+            }
+        }
+    </script>
+	
+    <script src="js/ns.js" type="text/javascript"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -70,6 +92,57 @@
             </div>
         </div>
     </header>
+	
+	    <div style="display:none;">
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+                    <li>
+                        <a class="ns-img" href="img/5.png"></a>
+                        <div class="caption">
+                            <h3>Purchase water bottles in store</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/1.png"></a>
+                        <div class="caption">
+                            <h3>Front</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ns-img" style="background-image:url(img/2.png);"></span>
+                        <div class="caption">
+                            <h3>Many sizes available</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/4.png"></a>
+                        <div class="caption">
+                            <h3>Clean filtered water</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/3.png"></a>
+                        <div class="caption">
+                            <h3>Try a sample!</h3>
+                        </div>
+                    </li>
+                </ul>
+                <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; margin: 70px auto;">
+        <h2>Take a look inside our shop</h2>
+        <br /><br />
+        <div class="gallery">
+            <img src="img/5_s.png" onclick="lightbox(0)" style="width:auto; height:150px;" />
+            <img src="img/1_s.png" onclick="lightbox(1)" style="width:auto; height:150px;" />
+            <img src="img/2_s.png" onclick="lightbox(2)" style="width:auto; height:150px;" />
+            <img src="img/4_s.png" onclick="lightbox(3)" style="width:auto; height:150px;" />
+            <img src="img/3_s.png" onclick="lightbox(4)" style="width:auto; height:150px;" />
+        </div>
+    </div>
 
     <section class="bg-primary" id="about">
         <div class="container">
@@ -98,7 +171,7 @@
                     <div class="service-box">
                         <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
                         <h3>Pure</h3>
-                        <p class="text-muted">Cutting-edge filter removes bad chemicals from your water.</p>
+                        <p class="text-muted">Cutting-edge filter removes harmful chemicals from your water.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
