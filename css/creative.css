@@ -313,3 +313,10 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+.credits {
+  font-size: 0.9em;
+  text-align: center;
+}
+.credits > a{
+  color: #228B22;
+}
